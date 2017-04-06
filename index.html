@@ -8,7 +8,11 @@
     <script src="app.js"></script>
   </head>
 
-  <body>
+  <body ng-controller='piglatinsCtrl as vm'>
+    {{2017 - 1969}}
+    <p>This is the string to translate: {{vm.plainWords}}</p>
+    <p>Words in array: {{vm.wrd}}</p>
+
 
   </body>
 </html>

@@ -1,5 +1,8 @@
 const vowels = /[aeiouy]/i //using regex to define vowel set that ignores case
-const blends = /(bl|br|ch|cl|cr|dr|fl|fr|gl|gr|pl|pr|sc|sh|sk|sl|sm|sn|sp|st|sw|th|tr|tw|wh|wr|sch|scr|shr|sph|spl)/i
+const blends2 = /(bl|br|ch|cl|cr|dr|fl|fr|gl|gr|pl|pr|sc|sh|sk|sl|sm|sn|sp|st|sw|th|tr|tw|wh|wr)/i
+const blends3 = /(sch|scr|shr|sph|spl)/i
+const punctuation = /[^_\W]+/g
+
 var str = "How are you doing today children?";
 
 var result = str.match(blends)
