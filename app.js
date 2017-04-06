@@ -10,16 +10,14 @@ const blends3 = /(sch|scr|shr|sph|spl)/i
 //using regex to define 3 letter blends set that ignores case
 const punctuation = /[~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g
 
-
-let plainWords = "Welcome to the wonderful world of Pig Latin."
-let wordArray = plainWords.split(/\s*\b\s*/)
-
-
 angular
   .module("piglatinApp", [])
   .controller("piglatinsCtrl", [ piglatinController ] )
 
 function piglatinController () {
+  var plainWords = "Welcome to the wonderful world of Pig Latin."
+  var wordArray = plainWords.split(/\s*\b\s*/)
+  this.plainWords = plainWords
 
   for (i = 0; i < wordArray.length; i++) {
     var lettersArray = wordArray[i].split("")

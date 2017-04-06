@@ -9,17 +9,17 @@
   </head>
 
   <body ng-controller='piglatinsCtrl as vm'>
-    {{2017 - 1969}}
-    <br><br>
+    <h2><a href='https://en.wikipedia.org/wiki/Pig_Latin'>Igpay Atinlay</a></h2>
+    <br>
     <textarea ng-model="vm.plainWordsArea"></textarea>
     <br>
     <p>This is the string to translate:
       <br><br>
-      {{vm.plainWordsArea}}
+      {{vm.plainWords}}
     </p>
     <button ng-click="translate">Anslatetray!</button>
 
-    <p>Words in Pig Latin: {{vm.piglatWords}}
+    <p>{{vm.piglatWords}}
 
 
   </body>
