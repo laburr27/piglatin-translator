@@ -10,8 +10,16 @@
 
   <body ng-controller='piglatinsCtrl as vm'>
     {{2017 - 1969}}
-    <p>This is the string to translate: {{vm.plainWords}}</p>
-    <p>Words in array: {{vm.wrd}}</p>
+    <br><br>
+    <textarea ng-model="vm.plainWordsArea"></textarea>
+    <br>
+    <p>This is the string to translate:
+      <br><br>
+      {{vm.plainWordsArea}}
+    </p>
+    <button ng-click="translate">Anslatetray!</button>
+
+    <p>Words in Pig Latin: {{vm.piglatWords}}
 
 
   </body>
