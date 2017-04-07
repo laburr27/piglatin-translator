@@ -15,14 +15,14 @@ angular
   .controller("piglatinsCtrl", [ piglatinController ] )
 
 function piglatinController () {
-  this.plainWords = 'Speak it if you dare!'
+  this.plainWords = "Welcome to the wonderful world of Pig Latin."
   this.wordArray = []
   this.piglatWords = ''
 
   this.translate = function() {
     this.wordArray = this.plainWords.split(/\s*\b\s*/)
-    for (i = 0; i < wordArray.length; i++) {
-      var lettersArray = wordArray[i].split("")
+    for (i = 0; i < this.wordArray.length; i++) {
+      var lettersArray = this.wordArray[i].split("")
       var ltrs3 = (lettersArray[0] + lettersArray[1] + lettersArray[2])
       var ltrs2 = (lettersArray[0] + lettersArray[1])
 
@@ -66,7 +66,7 @@ function piglatinController () {
       }
     }
     this.piglatWords = this.wordArray.join(" ")
-      console.log(piglatWords)
+      console.log(this.piglatWords)
   }
 //    console.log(wordArray)
 
