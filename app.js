@@ -15,7 +15,7 @@ angular
   .controller("piglatinsCtrl", [ piglatinController ] )
 
 function piglatinController () {
-  this.plainWords = "Welcome to the wonderful world of Pig Latin."
+  this.plainWords = ''
   this.wordArray = []
   this.piglatWords = ''
 

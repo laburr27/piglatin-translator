@@ -6,40 +6,86 @@
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-blue.css">
-
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="app.js"></script>
   </head>
 
-  <body class="w3-theme-d4" ng-controller='piglatinsCtrl as vm'>
-
-    <header class="w3-container w3-theme-d5" >
-      <h2><a href='https://en.wikipedia.org/wiki/Pig_Latin'>Igpay Atinlay</a></h2>
+  <body class="w3-pale-blue" ng-controller='piglatinsCtrl as vm'>
+    <div class="content">
+    <header class="w3-container w3-theme-d5 w3-padding" >
+      <h2><a href='https://en.wikipedia.org/wiki/Pig_Latin'>Igpay Atinlay</a></h2>Pig Latin
     </header>
 
-    <div class="w3-container">
+    <div class="w3-row-padding w3-center w3-margin-top">
+      <div class="w3-half">
+        <div class="w3-card-2 w3-theme-d4 " style="min-height:250px">
+          <header class="w3-container w3-theme-d5">
+            <h3>English Only Please</h3>(Englishay Onlyay Easeplay)
+          </header>
+          <form class="w3-container">
+            <section class="w3-card-4 w3-panel w3-center w3-khaki w3-round">
+                <input class="w3-input w3-center w3-khaki" type="text" placeholder="Enter Your Words Here" ng-model="vm.plainWords"></input>
+            </section>
+          </form>
+        <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+        </div>
+      </div>
 
-      <section class="w3-panel w3-theme w3-center w3-card-4 w3-section" style="width:75%">
-        <p>
-          <input class="w3-input w3-center w3-animate-input" type="text" style="width:30%" ng-model="vm.plainWords"></input>
-        </p>
-      </section>
+      <div class="w3-half">
+        <div class="w3-card-2 w3-theme-d4 " style="min-height:250px">
+          <header class="w3-container w3-theme-d5">
+            <h3>Igpay Atinlay Anslationtray</h3>(Pig Latin Translation)
 
-      <section class="w3-theme w3-center w3-card-4 w3-section" style="width:75%">
+          </header>
+          <div class="w3-container">
+            <section class="w3-card-4 w3-panel w3-center w3-khaki w3-round">
+              <div class="w3-container w3-center w3-khaki w3-round" style="min-height:38px">
+                  {{vm.piglatWords}}
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-container">
+        <section class="w3-panel w3-center w3-section">
+          <button class="w3-button w3-xlarge w3-round-large w3-padding-large w3-theme w3-hover-red w3-hover-shadow w3-ripple" style="width:30%" ng-click="vm.translate()">Anslatetray</button>
+        </section>
+      </div>
+
+    </div>
+  </div>
+    <footer class="footer w3-center w3-theme-d5 w3-padding-16">
+      <h3>Lisa Burr - Project 4 - General Assembly - WDI14</h3>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      <p>Remember to check out our  <a href="w3css_references.asp" >W3.CSS Reference</a></p>
+    </footer>
+  </body>
+</html>
+      <!-- <div class="w3-card-4 w3-theme w3-center w3-section" style="width:75%">
         <header class="w3-container w3-theme-d5">
-          <h3>My Words</h3>
+          <h3>Enter Your Words Here</h3>
         </header>
-        <p>{{vm.plainWords}}</p>
-        <footer class="w3-container w3-theme-d5">
-          "oink"
-        </footer>
-      </section>
 
-      <section class="w3-panel w3-center w3-section">
-        <button class="w3-button w3-xlarge w3-round-large w3-padding-large w3-theme-l3 w3-hover-red w3-hover-shadow w3-ripple" style="width:30%" ng-click="vm.translate()">Anslatetray!</button>
-      </section>
+        <form class="w3-container">
+          <section class="w3-panel w3-center">
+              <input class="w3-input w3-center w3-round" type="text" ng-model="vm.plainWords"></input>
+          </section>
+        </form>
+      </div> -->
+        <!-- <section class="w3-card-4 w3-theme w3-center w3-section" style="width:75%">
+          <header class="w3-container w3-theme-d5">
+            <h3>My Words</h3>
+          </header>
+          <p>{{vm.plainWords}}</p>
+          <footer class="w3-container w3-theme-d5">
+            "oink"
+          </footer>
+        </section> -->
 
-      <section class="w3-theme w3-center w3-card-4 w3-section" style="width:75%">
+
+      <!-- <section class="w3-theme w3-center w3-card-4 w3-section" style="width:75%">
         <header class="w3-container w3-theme-d5">
           <h3>Anslationtray Uccessfulsay</h3>
         </header>
@@ -47,13 +93,4 @@
         <footer class="w3-container w3-theme-d5">
           "oinkay"
         </footer>
-      </section>
-
-    </div>
-
-    <footer class="w3-container w3-theme-d5">
-      <h3>Lisa Burr - Project 4 - General Assembly - WDI14</h3>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </footer>
-  </body>
-</html>
+      </section> w3-container w3-center w3-theme-d5 w3-padding-16-->
